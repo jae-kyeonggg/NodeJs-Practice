@@ -6,3 +6,4 @@ Express/learn-express/learn-sequelize/node_modules
 Express/learn-mongoose/node_modules
 nodebird/node_modules
 nodebird/.env
+nodebird/config/config.json

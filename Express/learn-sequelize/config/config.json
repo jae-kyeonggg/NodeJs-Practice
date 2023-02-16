@@ -2,9 +2,9 @@
   "development": {
     "username": "root",
     "password": "Mqwsw123!",
-    "database": "nodebird",
-    "port": "3307",
+    "database": "nodejs",
     "host": "127.0.0.1",
+    "port": 3307,
     "dialect": "mysql"
   },
   "test": {
