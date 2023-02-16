@@ -10,6 +10,7 @@ var commentsRouter = require('./routes/comments');
 var connect = require('./schemas');
 
 var app = express();
+connect();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
