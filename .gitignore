@@ -4,7 +4,7 @@ Express/learn-express/node_modules
 Express/learn-express/learn-sequelize/config/config.json
 Express/learn-express/learn-sequelize/node_modules
 Express/learn-mongoose/node_modules
-nodebird/node_modules
-nodebird/.env
-nodebird/config/config.json
-nodebird/uploads
+nodebirds/nodebird/node_modules
+nodebirds/nodebird/.env
+nodebirds/nodebird/config/config.json
+nodebirds/nodebird/uploads
