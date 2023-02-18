@@ -8,3 +8,4 @@ nodebirds/nodebird/node_modules
 nodebirds/nodebird/.env
 nodebirds/nodebird/config/config.json
 nodebirds/nodebird/uploads
+nodebirds/nodebird-api/node_modules
