@@ -14,7 +14,13 @@ const { sequelize } = require('./models');
 const passportConfig = require('./passport');
 
 const app = express();
-sequelize.sync();
+sequelize.sync({ force: false })
+    .then(() => {
+        console.log('db 연결 성공');
+    })
+    .catch((err) => {
+        console.error(err);
+    });
 passportConfig(passport);
 
 app.set('views', path.join(__dirname, 'views'));
@@ -40,7 +46,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/', pageRouter);
-app.use('/', authRouter);
+app.use('/auth', authRouter);
 
 app.use((req, res, next) => {
     const err = new Error('Not Found');
