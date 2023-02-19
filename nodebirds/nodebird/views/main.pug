@@ -53,7 +53,7 @@ block content
     }
     document.querySelectorAll('.twit-follow').forEach(function (tag) {
       tag.addEventListener('click', function () {
-        var isLoggedIn = document.querySelector('#my-id');
+        var isLoggedIn = document.querySelectorAll('#my-id');
         if (isLoggedIn) {
           var userId = tag.parentNode.querySelector('.twit-user-id').value;
           var myId = isLoggedIn.value;
@@ -71,6 +71,9 @@ block content
               xhr.send();
             }
           }
+        }
+        else{
+          confirm('오류');
         }
       });
     });
