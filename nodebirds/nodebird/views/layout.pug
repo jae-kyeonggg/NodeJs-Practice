@@ -21,6 +21,7 @@ html
             input#my--id(type='hidden' value=user.id)
             a#my-profile.btn(href='/profile') 내 프로필
             a#logout.btn(href='/auth/logout') 로그아웃
+            button.profileUd.btn 닉네임 변경
           else 
             form#login-form(action='/auth/login' method='post')
               .input-group
@@ -38,3 +39,22 @@ html
           | Edited by&nbsp;
           a(href='https://github.com/jae-kyeonggg/NodeJs-Practice' target='_blank') jae-kyeonggg 
       block content
+
+  script.
+    document.querySelectorAll('.profileUd').forEach(function (tag) {
+      tag.addEventListener('click', function () {
+        var newNick = prompt('닉네임을 변경하시겠습니까?');
+        if (newNick) {
+          var xhr = new XMLHttpRequest();
+          xhr.onload = function() {
+            if (xhr.status === 200) {
+              location.reload();
+            } else {
+              console.error(xhr.responseText);
+            }
+          }
+        xhr.open('PATCH', '/user/', + newNick);
+        xhr.send();
+        }
+      });
+    });

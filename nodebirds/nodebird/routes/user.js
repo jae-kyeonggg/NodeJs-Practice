@@ -27,4 +27,14 @@ router.post('/:id/unfollow', isLoggedIn, async (req, res, next) => {
   }
 })
 
+router.patch('/:nick', isLoggedIn, async(req, res, next) => {
+  try {
+    const user = await User.update({ nick: req.body.nick }, { where: { id: req.user.id } });
+    res.send('success');
+  } catch (error) {
+    console.error(error);
+    next(error);
+  }
+});
+
 module.exports = router;
