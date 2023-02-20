@@ -27,10 +27,21 @@ router.post('/:id/unfollow', isLoggedIn, async (req, res, next) => {
   }
 })
 
-router.patch('/:nick', isLoggedIn, async(req, res, next) => {
+/* router.patch('/:nick', isLoggedIn, async(req, res, next) => {
   try {
-    const user = await User.update({ nick: req.body.nick }, { where: { id: req.user.id } });
+    console.log(req.user.id, req.params.id);
+    const user = await User.update({ nick: req.params.nick }, { where: { id: req.user.id } });
     res.send('success');
+  } catch (error) {
+    console.error(error);
+    next(error);
+  }
+}); */
+
+router.post('/profile', async(req, res, next) => {
+  try {
+    await User.update({ nick: req.body.nick }, { where: { id: req.user.id } });
+    res.redirect('/profile');
   } catch (error) {
     console.error(error);
     next(error);
