@@ -9,14 +9,14 @@ block content
           div
             div.fingNick= following.nick
             button.twit-unfollow 팔로우끊기
-      form#profile-form(method='post', action='/user/profile')
-        input(name='nick')
-        button 닉네임 변경
     .followers.half
       h2 팔로워 목록
       if user.Followers
         for follower in user.Followers
           div= follower.nick
+    form#profile-form(method='post', action='/user/profile')
+      input(name='nick')
+      button 닉네임 변경
   script.
     document.querySelectorAll('.twit-unfollow').forEach(function (tag) {
       tag.addEventListener('click', function () {
