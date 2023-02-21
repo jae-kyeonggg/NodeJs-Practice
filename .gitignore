@@ -20,3 +20,6 @@ nodebirds/nodebird-api/uploads
 
 nodebirds/nodebird-call/node_modules
 nodebirds/nodebird-call/.env
+
+gif-chat/gif-chat/node_modules
+gif-chat/gif-chat/.env
