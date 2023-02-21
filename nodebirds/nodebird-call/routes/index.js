@@ -73,4 +73,8 @@ router.get('/test', async (req, res, next) => {
     }
 });
 
+router.get('/', (req, res) => {
+    res.render('main', { key: process.env.CLIENT_SECRET });
+});
+
 module.exports = router;
