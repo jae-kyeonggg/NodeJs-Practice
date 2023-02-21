@@ -48,7 +48,7 @@ router.get('/search/:hashtag', async (req, res, next) => {
     }
 });
 
-/* router.get('/test', async (req, res, next) => {
+router.get('/test', async (req, res, next) => {
     try {
         if (!req.session.jwt) {
             const tokenResult = await axios.post('http://localhost:8002/v1/token', {
@@ -71,6 +71,6 @@ router.get('/search/:hashtag', async (req, res, next) => {
         }
         return next(error);
     }
-}); */
+});
 
 module.exports = router;
