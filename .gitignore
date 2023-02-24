@@ -21,6 +21,6 @@ nodebirds/nodebird-api/uploads
 nodebirds/nodebird-call/node_modules
 nodebirds/nodebird-call/.env
 
-gif-chat/gif-chat/node_modules
-gif-chat/gif-chat/.env
-gif-chat/gif-chat/uploads
+Services/gif-chat/node_modules
+Services/gif-chat/.env
+Services/gif-chat/uploads
