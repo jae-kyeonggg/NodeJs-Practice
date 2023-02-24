@@ -24,3 +24,8 @@ nodebirds/nodebird-call/.env
 Services/gif-chat/node_modules
 Services/gif-chat/.env
 Services/gif-chat/uploads
+
+Services/NodeAuction/node_modules
+Services/NodeAuction/config/
+Services/NodeAuction/.env
+Services/NodeAuction/uploads
