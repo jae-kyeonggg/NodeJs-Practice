@@ -8,7 +8,7 @@ const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
 
 const router = express.Router();
 
-router.user((req, res, next) => {
+router.use((req, res, next) => {
     res.locals.user = req.user;
     next();
 });
