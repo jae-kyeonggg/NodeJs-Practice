@@ -29,3 +29,6 @@ Services/NodeAuction/node_modules
 Services/NodeAuction/config/
 Services/NodeAuction/.env
 Services/NodeAuction/uploads
+
+Services/node-place/node_modules
+Services/node-place/.env
