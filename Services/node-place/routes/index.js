@@ -12,7 +12,7 @@ const googleMapsClient = googleMaps.createClient({
 
 router.get("/", async (req, res, next) => {
   try {
-    const favorites = await Favorite.findOne({});
+    const favorites = await Favorite.find({});
     res.render("index", { results: favorites });
   } catch (error) {
     console.error(error);
