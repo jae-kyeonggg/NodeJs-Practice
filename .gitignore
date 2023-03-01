@@ -34,3 +34,7 @@ Services/node-place/node_modules
 Services/node-place/.env
 Services/node-place/views/index.pug
 Services/node-place/views/result.pug
+
+node_modules
+package-lock.json
+package.json

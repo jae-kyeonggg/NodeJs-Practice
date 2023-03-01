@@ -4,7 +4,8 @@
   "description": "익스프레스로 만드는 SNS 서비스",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app"
+    "start": "cross-env NODE_ENV=production PORT=80 pm2 start app.js -i 0",
+    "dev": "nodemon app"
   },
   "author": "jaekyung",
   "license": "MIT",
